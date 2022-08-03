@@ -1,7 +1,7 @@
 package com.example.naverloginkotlinsdk
 
-import NaverThirdPartyLogin.NaverThirdPartyLoginConnection
-import NaverThirdPartyLogin.NaverThirdPartyLoginConnectionDelegateProtocol
+import kotlin.naver.login.NaverThirdPartyLoginConnection
+import kotlin.naver.login.NaverThirdPartyLoginConnectionDelegateProtocol
 import platform.UIKit.UIView
 
 actual typealias ApplicationContext = UIView

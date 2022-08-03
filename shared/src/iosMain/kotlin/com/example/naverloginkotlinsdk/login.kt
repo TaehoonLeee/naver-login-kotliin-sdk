@@ -1,6 +1,6 @@
 package com.example.naverloginkotlinsdk
 
-import ThirdPartyLogin.NaverThirdPartyLoginConnection
+import kotlin.naver.login.NaverThirdPartyLoginConnection
 
 actual class NaverLogin(
 	private val sdk: NaverThirdPartyLoginConnection = requireNotNull(NaverThirdPartyLoginConnection.getSharedInstance())
