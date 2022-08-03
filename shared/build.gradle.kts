@@ -18,27 +18,14 @@ kotlin {
     android {
         publishAllLibraryVariants()
     }
-
-    fun nativeTargetConfig(): org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget.() -> Unit = {
-        val nativeFrameworkPaths = projectDir.resolve("src/nativeInterop/cinterop")
-
-        compilations.getByName("main") {
-            cinterops.create("NaverThirdPartyLogin") {
-                compilerOpts("-F$nativeFrameworkPaths")
-            }
-        }
+    ios {
+        val frameworkPath = projectDir.resolve("src/nativeInterop/cinterop")
+        compilations["main"].cinterops.create("NaverLogin").compilerOpts("-F$frameworkPath")
     }
-    ios(configure = nativeTargetConfig())
 
-    sourceSets {
-        val commonMain by getting
-        val androidMain by getting {
-            dependencies {
-                implementation(project(":aos-naver", configuration = "default"))
-            }
-        }
-        val iosMain by getting {
-            dependsOn(commonMain)
+    sourceSets.getByName("androidMain") {
+        dependencies {
+            implementation(project(":aos-naver", configuration = "default"))
         }
     }
 }

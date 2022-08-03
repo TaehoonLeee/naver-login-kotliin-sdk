@@ -1,5 +1,0 @@
-language = Objective-C
-package = NaverThirdPartyLogin
-modules = NaverThirdPartyLogin
-compilerOpts = -framework NaverThirdPartyLogin
-linkerOpts = -framework NaverThirdPartyLogin
