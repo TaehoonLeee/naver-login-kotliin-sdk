@@ -2,10 +2,9 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("maven-publish")
-    id("com.kezong.fat-aar")
 }
 
-group = "com.lidupark"
+group = "com.durepark"
 version = "1.0.0"
 
 publishing {
@@ -25,7 +24,7 @@ kotlin {
 
     sourceSets.getByName("androidMain") {
         dependencies {
-            implementation(project(":aos-naver", configuration = "default"))
+            implementation("com.navercorp.nid:oauth:5.1.1")
         }
     }
 }

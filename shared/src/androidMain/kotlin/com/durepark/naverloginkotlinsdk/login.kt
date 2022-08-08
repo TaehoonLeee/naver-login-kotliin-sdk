@@ -1,4 +1,4 @@
-package com.example.naverloginkotlinsdk
+package com.durepark.naverloginkotlinsdk
 
 import com.navercorp.nid.NaverIdLoginSDK
 

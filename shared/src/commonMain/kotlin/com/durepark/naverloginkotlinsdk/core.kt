@@ -1,4 +1,4 @@
-package com.example.naverloginkotlinsdk
+package com.durepark.naverloginkotlinsdk
 
 expect object Naver {
 	val auth: NaverAuth

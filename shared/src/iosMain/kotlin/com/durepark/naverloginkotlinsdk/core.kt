@@ -1,4 +1,4 @@
-package com.example.naverloginkotlinsdk
+package com.durepark.naverloginkotlinsdk
 
 actual object Naver {
 	actual val auth = NaverAuth()
